@@ -1,5 +1,6 @@
-### My second project
+### second project
 
 ## game of life
 
-I made a version of game of life to test my knowledge of the idea behind it and this is what i came up with.
+me and a few friends of mine made a version of game-of-life to test our knowledge together and see how we would do if we worked together.
+it was a fun and very informative project !
