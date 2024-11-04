@@ -1,0 +1,152 @@
+/* Info-box stijlen */
+#info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 calc(33.333% - 2%);
+    padding: 1rem;
+    border-left: 0.5rem solid;
+    box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+#info:hover {
+    transform: translateY(-4px) scale(1.02);
+    cursor: pointer;
+}
+
+#info h3 {
+    color: #453e14;
+}
+
+/* Afbeeldingscontainer */
+#image {
+    height: 35rem;
+    width: 35rem;
+    position: relative;
+}
+
+#image img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    animation: gloweffect 2s infinite;
+}
+
+/* Keyframe-animaties */
+@keyframes gloweffect {
+    0%, 100% { filter: drop-shadow(0 0 0.35rem rgb(0, 174, 255)); }
+    25% { filter: drop-shadow(0 0 0.65rem rgb(0, 255, 4)); }
+    50% { filter: drop-shadow(0 0 0.85rem rgb(255, 0, 0)); }
+}
+
+/* Controls-sectie stijlen */
+#controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 20px;
+    padding: 20px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Naam binnen afbeeldingscontainer */
+#name {
+    position: absolute;
+    z-index: 9999;
+    font-size: 50pt;
+    left: 25%;
+    bottom: 0%;
+    color: white;
+    font-weight: bold;
+    -webkit-text-stroke: 3px black;
+    text-align: center;
+    filter: drop-shadow(0 0 0.9rem rgb(0, 0, 0));
+    transition: font-size 0.3s ease;
+}
+
+/* Knoppen stijlen */
+button {
+    margin-top: 10px;
+    padding: 12px 30px;
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: 2px solid #221;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, font-size 0.3s, box-shadow 0.3s, background 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #221;
+    color: #fff; 
+    font-size: 24px;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsieve stijlen */
+@media (max-width: 1200px) {
+    #name {
+        font-size: 40pt;
+        left: 20%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    #info {
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+        border-left: none;
+        border-bottom: 0.5rem solid;
+    }
+}
+
+@media (max-width: 768px) {
+    #name {
+        font-size: 35pt;
+        left: 15%;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 10px 25px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    #name {
+        font-size: 30pt;
+        left: 10%;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    #image {
+        height: 25rem;
+        width: 25rem;
+    }
+}
