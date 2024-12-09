@@ -1,4 +1,6 @@
-## my 1st group project of game of life
+###### my 1st group project 
+
+# game of life
 
 this is our version of the game called game-of-life<br>
 to test our knowledge together and see how we would do if we worked it as a group.
